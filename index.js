@@ -1,3 +1,5 @@
-module.exports = function () {
-  return 'Hello, world';
-};
+function run(){
+
+}
+
+run();
