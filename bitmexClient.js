@@ -3,8 +3,6 @@ var _ = require('lodash');
 var BitMEXAPIKeyAuthorization = require('./lib/BitMEXAPIKeyAuthorization');
 var config = require('./config.js');
 
-var sat2BTC = 0.00000001;
-
 function getBalance(cb){
   new SwaggerClient({
     url: 'https://www.bitmex.com/api/explorer/swagger.json',
