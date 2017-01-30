@@ -2,7 +2,7 @@ var expect = require('expect.js');
 var bitmexClient = require('../bitmexClient.js');
 
 describe('bitmexClient', function() {
-  this.timeout(10000);
+  this.timeout(60000);
   it('should be able to get balance', function(done) {
     bitmexClient.GetBalance(function(balance){
       //console.log('balance:', balance.marginBalance);

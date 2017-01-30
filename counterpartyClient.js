@@ -8,9 +8,9 @@ function getHttpData(options, result){
 
     response.on('data', function(chunk){
       var strChunk = ''+chunk;
-      strChunk = strChunk.replace('Mastercoin (...', 'Mastercoin');
-      strChunk = strChunk.replace('Global Curre...', 'Global Currency');
-      strChunk = strChunk.replace('Electronic G...', 'Electronic G');
+      //strChunk = strChunk.replace('Mastercoin (...', 'Mastercoin');
+      //strChunk = strChunk.replace('Global Curre...', 'Global Currency');
+      //strChunk = strChunk.replace('Electronic G...', 'Electronic G');
       str += strChunk;
     });
 
@@ -20,18 +20,16 @@ function getHttpData(options, result){
   }).end();
 }
 
-function getCpifAssetHolders(result){
+function getBalances(cb){
   
   var options = {
     host: 'xcp.blockscan.com',
     path: '/api2?module=asset&action=holders&name=cpif'
   };
 
-  getHttpData(options, function(cb){
-    result(cb);
+  getHttpData(options, function(result){
+    cb(result);
   });
 }
 
-getCpifAssetHolders(function(result){
-  console.log('cpifCounterwalletAddress:', result);
-});
+exports.GetBalances = getBalances;
