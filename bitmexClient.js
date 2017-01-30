@@ -35,6 +35,4 @@ function getBalance(cb){
   })
 }
 
-getBalance(function(balance){
-  console.log('balance:', balance.marginBalance*sat2BTC);
-});
+exports.GetBalance = getBalance;
