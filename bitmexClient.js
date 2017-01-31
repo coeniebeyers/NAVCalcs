@@ -12,8 +12,8 @@ function getBalance(cb){
     client.clientAuthorizations.add(
       "apiKey", 
       new BitMEXAPIKeyAuthorization(
-        config.apiKey, 
-        config.apiSecret
+        config.bitmexApiKey, 
+        config.bitmexApiSecret
       )
     );
 
