@@ -8,9 +8,6 @@ function getHttpData(options, result){
 
     response.on('data', function(chunk){
       var strChunk = ''+chunk;
-      //strChunk = strChunk.replace('Mastercoin (...', 'Mastercoin');
-      //strChunk = strChunk.replace('Global Curre...', 'Global Currency');
-      //strChunk = strChunk.replace('Electronic G...', 'Electronic G');
       str += strChunk;
     });
 
